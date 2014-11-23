@@ -17,7 +17,7 @@ namespace XamarinSample
         {
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
+             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
             // Get our button from the layout resource,
@@ -27,7 +27,7 @@ namespace XamarinSample
             button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
 
             var newButton = FindViewById<Button>(Resource.Id.button1);
-            newButton.Click += delegate { };
+            newButton.Click += delegate { StartActivity( typeof(NextActivity)); };
         }
     }
 }
