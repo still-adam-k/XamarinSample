@@ -1,3 +1,0 @@
-Start new solution - Xamarin Android App
-Add project - Core Library
-
