@@ -25,6 +25,9 @@ namespace XamarinSample
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
             button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+
+            var newButton = FindViewById<Button>(Resource.Id.button1);
+            newButton.Click += delegate { };
         }
     }
 }
