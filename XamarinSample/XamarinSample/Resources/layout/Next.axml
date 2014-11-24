@@ -1,12 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <TextView
-        android:text="Welcome to new activity"
+        android:text="Calculator"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/no1"
+            android:text="1"
+            local:MvxBind="Text No1" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/no2"
+            android:text="1"
+            local:MvxBind="Text No2" />
+    </LinearLayout>
+    <TextView
+        android:text="Result:"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/result"
+        local:MvxBind="Text Result" />
+    <Button
+        android:text="Add numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        local:MvxBind="Click CalculateCommand" />
 </LinearLayout>

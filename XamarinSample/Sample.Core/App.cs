@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Sample.Core.Services;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace Sample.Core
 {
-    public class Calculator : ICalculator
+    public class App : MvxApplication
     {
-        public int Add(int no1, int no2)
+        public override void Initialize()
         {
-            var sum = no1 + no2;
-            return sum;
+            base.Initialize();
         }
     }
 }

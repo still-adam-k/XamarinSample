@@ -9,26 +9,24 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Cirrious.MvvmCross.Droid.Views;
 using Sample.Core;
+using Sample.Core.ViewModel;
 
 namespace XamarinSample
 {
     [Activity(Label = "NewActivity")]
-    public class NextActivity : Activity
+    public class NextActivity : MvxActivity
     {
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnViewModelSet()
         {
             SetContentView(Resource.Layout.Next);
-            
-            var calculator = new Calculator();
-            var s1 = Intent.GetIntExtra("no1", 1);
-            var s2 = Intent.GetIntExtra("no2", 1);
-            var sum = calculator.Add(s1, s2);
+        }
 
-            var label = FindViewById<TextView>(Resource.Id.textView1);
-            label.Text = "The sum of " + s1 + " and " + s2 + " is " + sum;
-
-            base.OnCreate(bundle);
+        public new CalculatorViewModel ViewModel
+        {
+            get { return (CalculatorViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
         }
     }
 }
