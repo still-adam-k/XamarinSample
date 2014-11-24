@@ -25,6 +25,9 @@ namespace XamarinSample
             
             var newButton = FindViewById<Button>(Resource.Id.button1);
             newButton.Click += delegate { ToCalculator(); };
+
+            FindViewById<Button>(Resource.Id.btnWebview)
+                .Click += delegate { StartActivity(typeof (WebviewActivity)); };
         }
 
         protected void ToCalculator()
