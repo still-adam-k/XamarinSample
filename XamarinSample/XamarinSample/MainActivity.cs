@@ -27,7 +27,19 @@ namespace XamarinSample
             button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
 
             var newButton = FindViewById<Button>(Resource.Id.button1);
-            newButton.Click += delegate { StartActivity( typeof(NextActivity)); };
+            newButton.Click += delegate { PassNumbersToCalculator(); };
+        }
+
+        protected void PassNumbersToCalculator()
+        {
+            var no1 = Int32.Parse(FindViewById<EditText>(Resource.Id.no1).Text);
+            var no2 = Int32.Parse(FindViewById<EditText>(Resource.Id.no2).Text);
+
+            var calculatorActivity = new Intent(this, typeof(NextActivity));
+            calculatorActivity.PutExtra("no1", no1);
+            calculatorActivity.PutExtra("no2", no2);
+
+            StartActivity(calculatorActivity);
         }
     }
 }

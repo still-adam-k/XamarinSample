@@ -20,15 +20,15 @@ namespace XamarinSample
         {
             SetContentView(Resource.Layout.Next);
             
-            base.OnCreate(bundle);
-
             var calculator = new Calculator();
-            var s1 = 1;
-            var s2 = 2;
-            var sum = calculator.Add(1, 2);
+            var s1 = Intent.GetIntExtra("no1", 1);
+            var s2 = Intent.GetIntExtra("no2", 1);
+            var sum = calculator.Add(s1, s2);
 
             var label = FindViewById<TextView>(Resource.Id.textView1);
             label.Text = "The sum of " + s1 + " and " + s2 + " is " + sum;
+
+            base.OnCreate(bundle);
         }
     }
 }

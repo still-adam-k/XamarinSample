@@ -8,6 +8,23 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/Hello" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/no1"
+            android:text="1" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/no2"
+            android:text="2" />
+    </LinearLayout>
     <Button
         android:text="NewButton"
         android:layout_width="match_parent"
