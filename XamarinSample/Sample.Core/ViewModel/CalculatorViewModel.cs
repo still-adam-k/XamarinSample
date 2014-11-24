@@ -11,13 +11,13 @@ namespace Sample.Core.ViewModel
 {
     public class CalculatorViewModel : MvxViewModel
     {
-        private Calculator calculator;
+        private ICalculator _calculator;
 
-        public CalculatorViewModel()
+        public CalculatorViewModel(ICalculator calculator)
         {
             No1 = 1;
             No2 = 1;
-            calculator = new Calculator();
+            _calculator = calculator;
             _result = "Result is two-way binded to property";
         }
 
@@ -41,7 +41,7 @@ namespace Sample.Core.ViewModel
 
         public void Calculate()
         {
-            Result = calculator.Add(No1, No2).ToString();
+            Result = _calculator.Add(No1, No2).ToString();
         }
     }
 }

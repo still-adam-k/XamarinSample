@@ -1,7 +1,9 @@
 using Android.Content;
+using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
 using Sample.Core;
+using Sample.Core.Services;
 
 namespace XamarinSample
 {
@@ -14,6 +16,7 @@ namespace XamarinSample
 
         protected override IMvxApplication CreateApp()
         {
+            Mvx.RegisterType<ICalculator, Calculator>();
             return new App();
         }
     }

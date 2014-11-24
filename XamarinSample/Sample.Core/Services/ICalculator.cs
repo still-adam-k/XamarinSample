@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sample.Core.Services
 {
-    interface ICalculator
+    public interface ICalculator
     {
         int Add(int no1, int no2);
     }
