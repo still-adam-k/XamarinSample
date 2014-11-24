@@ -4,19 +4,22 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <Button
-        android:text="Go to calculator"
+    <TextView
+        android:text="Check Date and time on external service"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1" />
+        android:id="@+id/textView1"
+        android:gravity="center" />
     <Button
-        android:text="Go to webview"
+        android:text="Check!"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnWebview" />
-    <Button
-        android:text="Go to HTTP client"
+        android:id="@+id/btnGetDateFromRest" />
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/goToHttpClient" />
+        android:id="@+id/response" />
 </LinearLayout>

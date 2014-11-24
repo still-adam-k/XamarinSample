@@ -28,6 +28,9 @@ namespace XamarinSample
 
             FindViewById<Button>(Resource.Id.btnWebview)
                 .Click += delegate { StartActivity(typeof (WebviewActivity)); };
+
+            FindViewById<Button>(Resource.Id.goToHttpClient)
+                .Click += delegate { StartActivity(typeof(ExternalRestActivity)); };
         }
 
         protected void ToCalculator()
