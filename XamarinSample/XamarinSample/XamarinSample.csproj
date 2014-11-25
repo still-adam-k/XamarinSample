@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExternalRestActivity.cs" />
+    <Compile Include="LocationActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="NextActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -103,6 +104,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\HttpClient.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\location.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
