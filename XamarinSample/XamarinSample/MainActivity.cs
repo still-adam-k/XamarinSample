@@ -34,6 +34,9 @@ namespace XamarinSample
 
             FindViewById<Button>(Resource.Id.goToLocation)
                 .Click += delegate { StartActivity(typeof(LocationActivity)); };
+
+            FindViewById<Button>(Resource.Id.goToContactList)
+                .Click += delegate { StartActivity(typeof(ContactListAcitvity)); };
         }
 
         protected void ToCalculator()

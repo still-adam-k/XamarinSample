@@ -82,8 +82,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\MvvmCross.PortableSupport.3.2.2\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7.4\lib\android\Xamarin.Mobile.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContactListAcitvity.cs" />
     <Compile Include="ExternalRestActivity.cs" />
     <Compile Include="LocationActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -109,6 +113,9 @@
     <AndroidResource Include="Resources\layout\location.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\ContactItem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -128,6 +135,12 @@
       <Project>{2ef3a856-b1fa-4314-a646-1932932712dd}</Project>
       <Name>Sample.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <Visible>False</Visible>
+      <Version>0.7.4</Version>
+    </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
