@@ -40,12 +40,23 @@ namespace XamarinSample
 
             FindViewById<Button>(Resource.Id.goToCamera)
                 .Click += delegate { StartActivity(typeof(TakePhotoActivity)); };
+
+            FindViewById<Button>(Resource.Id.goToMaps)
+                .Click += delegate { ToMaps(); };
         }
 
         protected void ToCalculator()
         {
             var calculatorActivity = new Intent(this, typeof(NextActivity));
             StartActivity(calculatorActivity);
+        }
+
+        protected void ToMaps()
+        {
+            var geoUri = Android.Net.Uri.Parse("geo:52.2313123,21.0053084");
+            //var geoUri = Android.Net.Uri.Parse("geo:0,0?q=Palace+of+culture+and+science+plac+Defilad+1+warszawa");
+            var mapIntent = new Intent(Intent.ActionView, geoUri);
+            StartActivity(mapIntent);
         }
     }
 }
