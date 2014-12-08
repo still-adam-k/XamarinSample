@@ -38,6 +38,9 @@ namespace XamarinSample
             FindViewById<Button>(Resource.Id.goToContactList)
                 .Click += delegate { StartActivity(typeof(ContactListAcitvity)); };
 
+            FindViewById<Button>(Resource.Id.goToAddContact)
+                .Click += delegate { StartActivity(typeof(AddContactActivity)); };
+
             FindViewById<Button>(Resource.Id.goToCamera)
                 .Click += delegate { StartActivity(typeof(TakePhotoActivity)); };
 

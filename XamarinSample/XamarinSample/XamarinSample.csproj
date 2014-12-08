@@ -97,6 +97,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddContactActivity.cs" />
     <Compile Include="ContactListAcitvity.cs" />
     <Compile Include="DrawView.cs" />
     <Compile Include="ExternalRestActivity.cs" />
@@ -129,6 +130,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\image.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddContact.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>

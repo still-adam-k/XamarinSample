@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1">
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:text="Name"
+            android:padding="3dip" />
+        <EditText
+            android:text="Frank Sinatra"
+            android:gravity="right"
+            android:padding="3dip"
+            android:id="@+id/etName" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:text="Phone"
+            android:padding="3dip" />
+        <EditText
+            android:text="+48 00 00 00 00"
+            android:gravity="right"
+            android:padding="3dip"
+            android:id="@+id/etPhone" />
+    </TableRow>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="Check if exists"
+        android:padding="3dip"
+        android:id="@+id/btnCheckContactExists" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="Save"
+        android:padding="3dip"
+        android:id="@+id/btnSaveContact" />
+</TableLayout>
